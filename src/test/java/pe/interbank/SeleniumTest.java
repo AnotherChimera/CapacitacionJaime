@@ -16,7 +16,7 @@ public class SeleniumTest {
 
     @BeforeTest
     public  void setBaseUrl() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\xt9645\\Desktop\\CapacitacionBDDJaime\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir").concat("/src/test/resources/chromedriver.exe"));
         driver = new ChromeDriver();
         driver.get(baseUrl);
     }
